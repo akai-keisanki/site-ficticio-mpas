@@ -24,7 +24,7 @@ main
 main
 {
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-areas: "title title title title" "nav nav nav nav" "mainimg mainimg mainsubj mainsubj" "col1 col2 col3 col4" "about about about about" "footer footer footer footer";
+	grid-template-areas: "title title title title" "nav nav nav nav" "about about about about" "mainimg mainimg mainsubj mainsubj" "col1 col2 col3 col4" "footer footer footer footer";
 }
 
 
@@ -142,7 +142,7 @@ footer
 	main
 	{
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-areas: "title title" "nav nav" "mainimg mainsubj" "col1 col2" "col3 col4" "about about" "footer footer";
+		grid-template-areas: "title title" "nav nav" "about about" "mainimg mainsubj" "col1 col2" "col3 col4" "footer footer";
 	}
 }
 
@@ -156,7 +156,7 @@ footer
 	main
 	{
 		grid-template-columns: 1fr;
-		grid-template-areas: "title" "nav" "mainimg" "mainsubj" "col1" "col2" "col3" "col4" "about" "footer";
+		grid-template-areas: "title" "nav" "about" "mainimg" "mainsubj" "col1" "col2" "col3" "col4" "footer";
 	}
 
 	#mainsubject, #about
