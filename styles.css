@@ -1,0 +1,172 @@
+div, main, nav, footer
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body
+{
+	margin: 0;
+
+	font-size: max(2.7vh, 1.5vw);
+	font-family: "Arial", sans-serif;
+}
+
+main
+{
+	padding: 5vh;
+
+	display: grid;
+	gap: 7vh;
+}
+
+main
+{
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas: "title title title title" "nav nav nav nav" "mainimg mainimg mainsubj mainsubj" "col1 col2 col3 col4" "about about about about" "footer footer footer footer";
+}
+
+
+#title
+{
+	grid-area: title;
+
+	margin-top: 5vh;
+
+	font-size: 0.8em;
+
+	flex-direction: column;
+}
+
+nav
+{
+	grid-area: nav;
+
+	margin: 3vh;
+	margin-bottom: 6vh;
+
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 2vh;
+}
+
+
+#mainimgdiv
+{
+	grid-area: mainimg;
+}
+
+#mainsubject
+{
+	grid-area: mainsubj;
+
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+
+#col1
+{
+	grid-area: col1;
+}
+
+#col2
+{
+	grid-area: col2;
+}
+
+#col3
+{
+	grid-area: col3;
+}
+
+#col4
+{
+	grid-area: col4;
+}
+
+
+#about
+{
+	grid-area: about;
+
+	flex-direction: column;
+}
+
+footer
+{
+	grid-area: footer;
+}
+
+
+#mainimg, .colimg
+{
+	width: 100%;
+	background-color: #000000;
+}
+
+.colimg
+{
+	height: calc(15vh + 10vw);
+}
+
+
+#titleh
+{
+	margin: 0;
+	font-size: 5em;
+}
+
+.col
+{
+	margin: 5vh 0;
+
+	flex-direction: column;
+	text-align: center;
+}
+
+.navel
+{
+	padding: 1vh;
+	border: solid #000000 0.2vh;
+}
+.navel:hover
+{
+	background-color: #00000020;
+}
+
+@media only screen and (max-width: 150vh)
+{
+	main
+	{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: "title title" "nav nav" "mainimg mainsubj" "col1 col2" "col3 col4" "about about" "footer footer";
+	}
+}
+
+@media only screen and (max-width: 80vh)
+{
+	body
+	{
+		font-size: 2.25vh;
+	}
+
+	main
+	{
+		grid-template-columns: 1fr;
+		grid-template-areas: "title" "nav" "mainimg" "mainsubj" "col1" "col2" "col3" "col4" "about" "footer";
+	}
+
+	#mainsubject, #about
+	{
+		padding: 3vh 2vh;
+	}
+
+	.col
+	{
+		padding: 2vh 0;
+		margin: 0 0;
+	}
+}
